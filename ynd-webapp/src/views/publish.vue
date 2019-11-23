@@ -1,16 +1,18 @@
 <template>
   <div>
-    发布
+    <publishtop/>
     <footbar></footbar>
   </div>
 </template>
 
 <script>
   import footbar from "../components/common/footerbar/footbar";
+  import publishtop from "../components/publish/publishtop";
   export default {
     name: "publish",
     components:{
-      footbar
+      footbar,
+      publishtop,
     }
   }
 </script>

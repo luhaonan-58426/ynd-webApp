@@ -31,5 +31,17 @@
   }
   body{
     font-size: 0.16rem;
+    overflow: auto;
+    width: 100%;
+    background-color: white
   }
+  a{
+    color: black
+  }
+    html,body{
+    overflow-x:hidden;
+    }
+
+    @import './assets/carts.css';
+    @import './assets/basic.css'
 </style>

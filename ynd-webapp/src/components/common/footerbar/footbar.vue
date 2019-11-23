@@ -2,31 +2,31 @@
   <div class="bottombar">
     <router-link to="/home">
       <div @click="switchTo('/home')">
-        <img :src="'/home'===$route.path?sysrc:sysrc1" alt="">
+        <img :src="'/home/index'===$route.path?sysrc:sysrc1" alt="">
         <p>首页</p>
       </div>
     </router-link>
-    <router-link to="/classify">
-      <div @click="switchTo('/classify')">
-        <img :src="'/classify'===$route.path?flsrc:flsrc1" alt="">
+    <router-link to="/advgoodsshow">
+      <div @click="switchTo('/advgoodsshow')">
+        <img :src="'/advgoodsshow'===$route.path?flsrc:flsrc1" alt="">
         <p>分类</p>
       </div>
       </router-link>
     <router-link to="/publish">
       <div @click="switchTo('/publish')">
         <img :src="'/publish'===$route.path?gsrc:gsrc1" alt="">
-        <p>发布</p>
+        <p>消息</p>
       </div>
       </router-link>
-    <router-link to="/community">
+    <router-link to="/advgoodscars">
       <div>
-        <img :src="gwcsrc" alt="">
-        <p>社区</p>
+        <img :src="'/advgoodscars'===$route.path?gwcsrc1:gwcsrc" alt="">
+        <p>购物车</p>
       </div>
       </router-link>
     <router-link to="/my">
       <div>
-        <img :src="mysrc" alt="">
+        <img :src="'/my'===$route.path?mysrc:mysrc1" alt="">
         <p>我的</p>
       </div>
       </router-link>
@@ -45,7 +45,9 @@
             gsrc:require("../../../../static/sy/g.png"),
             gsrc1:require("../../../../static/sy/g1.png"),
             gwcsrc:require("../../../../static/sy/gwc1.png"),
-            mysrc:require("../../../../static/sy/my1.png")
+            gwcsrc1:require("../../../../static/sy/gwc.png"),
+            mysrc:require("../../../../static/sy/my1.png"),
+             mysrc1:require("../../../../static/sy/my.png")
           }
       },
       methods:{
@@ -67,7 +69,9 @@
     img{
       display: block;
       border: none;
-      width: 0.45rem;
+      width: 0.3rem;
+      height: 0.3rem;
+      padding: 0.05rem;
       margin: 0 auto;
     }
     p{
@@ -83,5 +87,7 @@
     flex-direction: row;
     background-color: white;
     padding-bottom: 0.03rem;
+    z-index: 3;
+    
   }
 </style>
